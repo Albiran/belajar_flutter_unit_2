@@ -1,4 +1,4 @@
-import 'package:belajar_flutter_unit_2/discover_page.dart';
+import 'package:belajar_flutter_unit2/widgets/menu.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,8 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Belajar Flutter",
-      home: DiscoverPage(),
+      title: "Learn Flutter",
+      debugShowCheckedModeBanner: false,
+      home: Menu(),
     );
   }
 }

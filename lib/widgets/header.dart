@@ -9,42 +9,31 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
-        top: 30,
-        left: 24,
-        right: 24,
-      ),
+      padding: const EdgeInsets.only(top: 30, bottom: 24, left: 24, right: 24),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Estate",
-                style: GoogleFonts.poppins(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                "Best dicovery ever",
-                style: GoogleFonts.poppins(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w300,
-                ),
-              ),
+              Text("Estate",
+                  style: GoogleFonts.poppins(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  )),
+              Text("Best Discovery ever",
+                  style: GoogleFonts.poppins(
+                      fontSize: 14, fontWeight: FontWeight.normal)),
             ],
-          ), //colum
-          Container(
-            height: 40,
-            width: 40,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 7, 164, 255),
-              borderRadius: BorderRadius.circular(40),
-            ),
-            child: const Icon(Icons.notifications_outlined),
           ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(100),
+            child: Container(
+                color: Color.fromARGB(255, 238, 238, 238),
+                padding: const EdgeInsets.all(8),
+                child:
+                    Container(child: const Icon(Icons.notifications_outlined))),
+          )
         ],
       ),
     );
